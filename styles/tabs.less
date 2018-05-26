@@ -7,20 +7,35 @@
 
 .tab-bar {
   background-color: @tab-bar-background-color;
-  border-bottom: 1px solid @base-border-color;
 
   .tab {
+    margin-top: @component-padding/2;
     color: @text-color;
     height: @tab-height;
     line-height: @tab-height;
     font-size: @font-size;
-    border-right: 1px solid @tab-border-color;
-    background-color: @tab-background-color;
+    background-color: @tab-bar-background-color;
+    border-bottom: 1px solid @tab-bar-border-color;
+
     &.active {
+      transition: all 0.3s ease-in-out;
       color: @text-color-selected;
-      background-color: @tab-background-color-active;
+      background-color: @tab-background-color;
+      border-bottom: none;
+      border-top: 1px solid darken(@active-color, 1%);
+      // border-right: 1px solid @base-border-color;
+      // border-left: 1px solid @base-border-color;
+
+      &:focus {
+        border-top: 2px solid lighten(@base-border-color, 20%);
+      }
     }
 
+
+    .title {
+      padding-left: @component-padding;
+      padding-right: @component-padding;
+    }
 
     // Modified Icon (the circle) -------------------
     &.modified:not(:hover) .close-icon {
@@ -53,5 +68,25 @@
         visibility: hidden;
       }
     }
+
+
+    // Tree View -------------------
+    &[data-type="TreeView"] {
+      display: block;
+      width: 100%;
+      border: none;
+      background-color: @tab-bar-background-color;
+      border-top: none;
+      border-bottom: 1px solid @base-border-color;
+      color: @text-color;
+    }
+  }
+}
+
+.pane.active {
+  .tab.active {
+    border-top: 1px solid @color-highlight;
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.05),
+                1px -1px 10px rgba(0,0,0,0.05);
   }
 }

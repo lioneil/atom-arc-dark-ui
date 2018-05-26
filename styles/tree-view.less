@@ -13,6 +13,36 @@
 .tree-view {
   color: @text-color;
   background-color: @tree-view-background-color;
+  border-left: 1px solid @base-border-color;
+
+  .tree-view-root {
+    background-color: @tree-view-background-color;
+    padding: 0;
+
+    .list-item {
+      padding-left: @component-padding;
+      padding-right: @component-padding;
+    }
+
+    > li.list-nested-item:not(:first-child) > .list-item.header {
+      border-top: 1px solid @base-border-color;
+    }
+  }
+
+  .selected {
+    &:before {
+      background-color: @tree-view-background-color-active;
+    }
+  }
+
+  &:focus {
+    .selected {
+      &:before {
+        color: lighten(@text-color-selected, 50%);
+        background-color: @tree-view-background-color-selected;
+      }
+    }
+  }
 
   .list-item.selected {
     color: @text-color-selected;

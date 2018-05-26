@@ -1,13 +1,13 @@
 {
-  "name": "ui-theme-template",
+  "name": "atom-arc-dark-ui",
   "theme": "ui",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A short description of your UI theme",
   "keywords": [
-    "ui",
+    "arc",
     "theme"
   ],
-  "repository": "https://github.com/atom-community/ui-theme-template",
+  "repository": "https://github.com/lioneil/atom-arc-dark-ui",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"

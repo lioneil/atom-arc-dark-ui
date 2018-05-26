@@ -8,17 +8,18 @@
 .btn {
   color: lighten(@text-color, 6%);
   background-color: @button-background-color;
+  border: 1px solid @button-border-color;
   &:hover,
   &:focus {
-    color: @text-color-highlight;
-    background-color: @button-background-color-hover;
+    color: fade(@text-color-highlight, 66%);
+    background-color: darken(@button-background-color-selected, 8%);
   }
   &:active {
-    color: fade(@text-color-selected, 66%);
+    color: fade(@text-color-highlight, 66%);
     background-color: darken(@button-background-color, 2%);
   }
   &.selected {
-    color: @text-color-selected;
+    color: lighten(@text-color-highlight, 2%);
     background-color: @button-background-color-selected;
   }
   &:focus,
@@ -55,9 +56,38 @@
   }
 }
 
+// Button -----------------------------
+.btn {
+  border-radius: @component-border-radius;
+  border-color: @button-border-color;
+}
 
 // Button Group -----------------------
 
 .btn-group > .btn {
-  border-color: hsla(0,0%,0%,.2);
+  border-color: @button-border-color;
+  border-radius: @component-border-radius;
+}
+
+.btn-group {
+  > .btn {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    &:first-child {
+      border-left: 1px solid @button-border-color;
+    }
+    &:last-child {
+      border-right: 1px solid @button-border-color;
+    }
+  }
+}
+
+.btn-group > .btn:last-child:not(:first-child), .btn-group > .dropdown-toggle:not(:first-child) {
+  // border-radius: @component-border-radius;
+}
+
+// Misc
+.close-icon,
+.tab-bar .tab .close-icon {
+  cursor: pointer;
 }

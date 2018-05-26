@@ -1,0 +1,33 @@
+.editor.mini,
+.modal.from-top .editor.mini,
+atom-text-editor[mini],
+.settings-view select.form-control,
+select.form-control,
+.form-control {
+  padding-left: @component-padding/2;
+  color: @text-color;
+  border-radius: @component-border-radius;
+  border: 1px solid @input-border-color;
+  background-color: @input-background-color;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+
+  &:focus, &.is-focused  {
+    background-color: darken(@input-background-color, 2%);
+    border: 1px solid @color-highlight;
+    z-index: 3;
+  }
+
+  .placeholder-text {
+    color: @text-color-subtle;
+  }
+  .selection .region {
+    background-color: @background-color-selected;
+  }
+}
+
+.settings-view select.form-control {
+  &:hover {
+    background-color: @input-background-color;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  }
+}

@@ -14,9 +14,29 @@ body {
   background-color: @app-background-color;
 }
 
-atom-pane {
-  border-right: 1px solid @base-border-color;
-  &:last-child {
-    border-right: none;
+atom-workspace-axis {
+  &.horizontal {
+    // border-top: 1px solid darken(@base-border-color, 1%);
   }
+}
+
+atom-pane {
+  border: 1px solid darken(@base-border-color, 1%);
+  &:last-child {
+    // border-right: none;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  padding: 0 2px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 1px;
+  background-color: @background-color-highlight;
 }

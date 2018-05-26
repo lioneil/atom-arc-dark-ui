@@ -1,0 +1,37 @@
+atom-dock {
+
+	.atom-dock-mask {
+		background-color: @base-background-color;
+	}
+
+	.tab-bar {
+		.tab {
+			padding: 0;
+			padding-right: 0;
+			&.active {
+				max-width: none;
+
+				.title {
+					padding: 0;
+					text-align: center;
+				}
+			}
+		}
+	}
+}
+
+.atom-dock {
+	&-content-wrapper.left {
+		background-color: @base-background-color;
+		right: 0;
+	}
+
+	&-resize-handle {
+		background-color: transparent;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 11;
+	}
+}
