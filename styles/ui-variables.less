@@ -70,10 +70,10 @@
 @tab-background-color-active:   lighten(@tab-bar-background-color, 10%);
 @tab-border-color:              @base-border-color;
 
-@tree-view-background-color:          @base-background-color;
+@tree-view-background-color:          darken(@base-background-color, 1.5%);
 @tree-view-border-color:              @base-border-color;
 @tree-view-background-color-selected: @background-color-selected;
-@tree-view-background-color-active:   lighten(@tree-view-background-color, 10%);
+@tree-view-background-color-active:   @tree-view-background-color;
 
 // Site colors
 @ui-site-color-1: hsl(208, 100%, 50%); // blue
@@ -83,7 +83,7 @@
 @ui-site-color-5: #EBDD5B;             // yellow
 
 // Sizes
-@font-size: 12px;
+// @font-size: 12px;
 @input-font-size: 14px;
 
 @disclosure-arrow-size: 12px;
