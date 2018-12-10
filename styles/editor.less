@@ -40,6 +40,12 @@ atom-text-editor {
   .indent-guide {
     color: lighten(@base-background-color, 5%);
   }
+  
+  &.mini {
+    &.is-focused, &:focus {
+      border-color: @color-highlight;
+    }
+  }
 }
 
 atom-text-editor[mini] {
