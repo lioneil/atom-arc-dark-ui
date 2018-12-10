@@ -12,6 +12,10 @@ atom-text-editor {
     &.line-numbers {
       .line-number {
         color: @text-color-subtle;
+        
+        &.cursor-line {
+          color: lighten(@text-color-subtle, 50%);
+        }
 
         &.git-line {
           &-added {
