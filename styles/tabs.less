@@ -23,9 +23,10 @@
       color: @text-color-selected;
       background-color: @tab-background-color;
       border-bottom: none;
-      border-top: 1px solid darken(@active-color, 1%);
-      // border-right: 1px solid @base-border-color;
-      // border-left: 1px solid @base-border-color;
+      
+      &[data-type=TextEditor] {
+        border-top: 1px solid darken(@active-color, 1%);
+      }
 
       &:focus {
         border-top: 2px solid lighten(@base-border-color, 20%);

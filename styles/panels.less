@@ -62,9 +62,13 @@ atom-panel.modal {
     }
     
     // The Command Palette
-    .command-palette {
+    .command-palette, 
+    .select-list.fuzzy-finder,
+    .select-list.grammar-selector,
+    .select-list {
       .editor.mini {
         border-radius: @component-border-radius;
+        background-color: @overlay-background-color;
         // padding-left: 0;
       }
     }

@@ -4,3 +4,8 @@
 
 ## 0.1.4
 * Fixed the width of the bottom resize handle
+
+## 0.1.5
+* Added styling to progressbar
+* Only activate border-top highlight on TextEditor type tabs
+* Various minor improvements 
