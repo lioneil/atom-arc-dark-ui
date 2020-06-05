@@ -2,10 +2,8 @@
 
 __Arc Dark__ is an Atom theme heavily inspired by the __[Arc Theme for Gnome](https://github.com/horst3180/arc-theme)__.
 
-*🚀 This theme is currently in its early development. Expect some inconsistency with some of the UI components*
 
-
-## Getting started
+## 🚀 Getting started
 
 ![alt text](./Screenshot.png "Atom Arc Dark Ui Preview")
 
